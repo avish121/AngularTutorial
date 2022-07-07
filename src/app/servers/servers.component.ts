@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  constructor() { }
+  allowedAddButton: Boolean = false
+  constructor() {
+    setTimeout(()=> {
+      this.allowedAddButton = true
+    },5000)
+  }
 
   ngOnInit(): void {
   }
