@@ -1,8 +1,8 @@
 <h3>servers works!</h3>
-<input type="button" [disabled]="!allowedAddButton" class="btn btn-primary" value="Add Server">
+<input type="button" [disabled]="!allowedAddButton" class="btn btn-primary" value="Add Server" (click)="onCreateServer()">
 <hr>
 <app-server></app-server>
 <app-server></app-server>
 <hr>
-<success-alert></success-alert>
-<app-warning-alert></app-warning-alert>
+<p>{{serverCreatedStatus}}</p>
+<input class="form-control" type="text" (input)="onUpdateServerName($event)">
